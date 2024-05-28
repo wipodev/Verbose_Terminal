@@ -1,4 +1,4 @@
-# Recaptcha Cracker [![Python](https://img.shields.io/pypi/v/verbose-terminal.svg)](https://pypi.org/project/verbose-terminal/) [![Downloads](https://static.pepy.tech/badge/verbose-terminal)](https://pepy.tech/project/verbose-terminal)
+# Verbose Terminal [![Python](https://img.shields.io/pypi/v/verbose-terminal.svg)](https://pypi.org/project/verbose-terminal/) [![Downloads](https://static.pepy.tech/badge/verbose-terminal)](https://pepy.tech/project/verbose-terminal)
 
 ## Description
 
