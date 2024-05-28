@@ -40,14 +40,3 @@ class Msg:
     @classmethod
     def info_light(cls, message, verbose=False):
         cls.msg(message, verbose=verbose, style='info_light')
-
-if __name__ == '__main__':
-  # Examples of use
-  Msg.success("Test message", True)
-  Msg.warning("Test message", True)
-  Msg.error("Test message", True)
-  Msg.info("Test message", True)
-  Msg.success_light("Test message", True)
-  Msg.warning_light("Test message", True)
-  Msg.error_light("Test message", True)
-  Msg.info_light("Test message", True)
