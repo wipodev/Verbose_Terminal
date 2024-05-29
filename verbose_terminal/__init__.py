@@ -1,1 +1,1 @@
-from .main import Msg
+from .main import console
