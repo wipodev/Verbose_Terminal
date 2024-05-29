@@ -2,7 +2,7 @@
 
 ## Description
 
-Verbose Terminal is a Python library that provides a simple and easy-to-use interface for displaying styled messages in the terminal. It includes predefined styles for success, warning, error, and informational messages, both with and without background colors.
+Verbose Terminal is a Python library that provides a simple and easy-to-use interface for displaying stylish messages in the terminal. It includes predefined styles for log, debug, info, success, warning, error and critical messages, and also has support for logging.
 
 ## Requirements
 
@@ -117,6 +117,16 @@ from verbose_terminal import console
 console.save_logs('logs.txt')
 ```
 
+## Running Tests
+
+To run the tests, run the following command:
+
+```bash
+pytest
+```
+
+This will execute the unit tests and display the styled messages in the terminal, allowing you to visually verify the output.
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute, please follow these steps:
@@ -128,20 +138,16 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 
-## Running Tests
+## Support
 
-To run the tests, run the following command:
+Feel free to explore the code and customize the styles as per your requirements. If you encounter any issues or have suggestions for improvements, please open an issue on GitHub.
 
-```bash
-pytest
-```
+## Changelog
 
-This will execute the unit tests and display the styled messages in the terminal, allowing you to visually verify the output.
+Please see the [CHANGELOG.md](CHANGELOG.md) file for details on recent changes and releases.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/wipodev/Verbose_Terminal/blob/main/LICENSE) file for more details.
 
 ---
-
-Feel free to explore the code and customize the styles as per your requirements. If you encounter any issues or have suggestions for improvements, please open an issue on GitHub.
