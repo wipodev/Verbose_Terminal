@@ -18,52 +18,103 @@ pip install verbose-terminal
 
 ## Usage
 
-Import the `Msg` class from the `verbose_terminal` module and use its methods to print styled messages. The following examples demonstrate how to use the library:
+Import the `console` class from the `verbose_terminal` module and use its methods to print styled messages. The following examples demonstrate how to use the library:
 
 ### Basic Usage
 
 ```python
-from verbose_terminal import Msg
+from verbose_terminal import console
 
 # Displaying messages with different styles
-Msg.success("Operation completed successfully!", verbose=True)
-Msg.warning("This is a warning message.", verbose=True)
-Msg.error("An error has occurred.", verbose=True)
-Msg.info("Here is some information.", verbose=True)
-```
-
-### Light Styles (Text Only)
-
-```python
-from verbose_terminal import Msg
-
-# Displaying messages with text styles only
-Msg.success_light("Success message without background", verbose=True)
-Msg.warning_light("Warning message without background", verbose=True)
-Msg.error_light("Error message without background", verbose=True)
-Msg.info_light("Info message without background", verbose=True)
+console.log("This is a plain message.")
+console.debug("This is a debug message.")
+console.info("Here is some information.")
+console.success("Operation completed successfully!")
+console.warning("This is a warning message.")
+console.error("An error has occurred.")
+console.critical("This is a critical message.")
 ```
 
 ## Verbose Flag
 
-By default, the `verbose` flag is set to `False`. This means that the messages will not be displayed in the terminal. To display the messages in the terminal, set the `verbose` flag to `True`.
+By default, the `verbose` flag is set to `True`. This means that the messages will be displayed on the terminal. To not display messages in the terminal, set the `verbose` flag to `False`.
 
 ```python
-from verbose_terminal import Msg
+from verbose_terminal import console
 
 # Displaying messages in the terminal
-Msg.success("This message will be displayed.", verbose=True)
-Msg.success("This message will not be displayed.", verbose=False)
+console.log("This message will be displayed.")
+console.log("This message will not be displayed.", verbose=False)
 ```
 
-## Using `msg` Method Directly
+## Logging
+
+Verbose Terminal can also log all messages to a file, whether they are printed to the terminal or not.
+
+### Enable Logging
+
+To enable logging, use the `enable_logging` method and specify a log file:
 
 ```python
-from verbose_terminal import Msg
+from verbose_terminal import console
 
-# Displaying messages in the terminal
-Msg.msg("This is a plain message", verbose=True)
-Msg.msg("This message will not be displayed", verbose=False)
+# Enable logging to 'messages.log'
+console.enable_logging('messages.log')
+```
+
+### Log flag level
+
+By default, the `log_level` flag is set to `INFO`. Only messages will be recorded: info, success, warning, error and critical, if you want to add the debug and log messages you must pass the `LOG` flag
+
+```python
+from verbose_terminal import console
+
+# Enable logging to 'messages.log'
+console.enable_logging('messages.log', log_level='LOG')
+```
+
+### Disable Logging
+
+To disable logging, use the `disable_logging` method:
+
+```python
+from verbose_terminal import console
+
+# Disable logging
+console.disable_logging()
+```
+
+### View Logs
+
+To view the logs, use the `view_logs` method:
+
+```python
+from verbose_terminal import console
+
+# View logs
+print(console.view_logs())
+```
+
+### Clear Logs
+
+To clear the logs, use the `clear_logs` method:
+
+```python
+from verbose_terminal import console
+
+# Clear logs
+console.clear_logs()
+```
+
+### Save Logs
+
+To save the logs to a file, use the `save_logs` method:
+
+```python
+from verbose_terminal import console
+
+# Save logs to 'logs.txt'
+console.save_logs('logs.txt')
 ```
 
 ## Contributing
@@ -82,7 +133,7 @@ Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.
 To run the tests, run the following command:
 
 ```bash
-pytest -s
+pytest
 ```
 
 This will execute the unit tests and display the styled messages in the terminal, allowing you to visually verify the output.
