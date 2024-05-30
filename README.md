@@ -1,4 +1,10 @@
-# Verbose Terminal ![PyPI - Version](https://img.shields.io/pypi/v/Verbose_Terminal) ![PyPI - Downloads](https://img.shields.io/pypi/dm/Verbose_Terminal) ![PyPI - License](https://img.shields.io/pypi/l/Verbose_Terminal)
+# Verbose Terminal
+
+[![Github release](https://img.shields.io/github/v/release/wipodev/Verbose_Terminal?color=0172ad&logo=github&logoColor=white)](https://github.com/wipodev/Verbose_Terminal/releases/latest)
+[![PyPI - Version](https://img.shields.io/pypi/v/Verbose_Terminal?label=pypi%20release&color=0172ad)](https://pypi.org/project/Verbose_Terminal/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/Verbose_Terminal?color=0172ad&label=pypi%20downloads)](https://pypi.org/project/Verbose_Terminal/)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/wipodev/Verbose_Terminal/total?color=0172ad&label=github%20downloads)](https://github.com/wipodev/Verbose_Terminal)
+[![License](https://img.shields.io/badge/license-MIT-%230172ad)](https://github.com/wipodev/Verbose_Terminal/blob/master/LICENSE)
 
 ## Description
 
