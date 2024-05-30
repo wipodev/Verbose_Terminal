@@ -2,7 +2,7 @@ import logging
 import os
 from .styles import styles, reset
 
-class console:
+class Console:
     log_enabled = False
     logger = None
     log_file = 'messages.log'
@@ -15,7 +15,7 @@ class console:
         numeric_level = getattr(logging, log_level.upper(), logging.INFO)
         cls.logger.setLevel(numeric_level)
         handler = logging.FileHandler(cls.log_file)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(message)s')
         handler.setFormatter(formatter)
         cls.logger.addHandler(handler)
         # Define custom log level for success
@@ -105,3 +105,6 @@ class console:
     def critical(cls, message: str, verbose: bool = True) -> None:
         cls._print_message(message, verbose, 'critical')
         cls._log_message(message, 'critical')
+
+# Creating a single instance of the Console class
+console = Console()

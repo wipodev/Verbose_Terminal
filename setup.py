@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='verbose-terminal',
-    version='1.0.0',
+    version='1.0.1',
     author='Wipodev',
     author_email='ajwipo@gmail.com',
     description='A Python library for displaying messages in the terminal with styles and logging support.',

@@ -1,4 +1,4 @@
-# Verbose Terminal [![Python](https://img.shields.io/pypi/v/verbose-terminal.svg)](https://pypi.org/project/verbose-terminal/) [![Downloads](https://static.pepy.tech/badge/verbose-terminal)](https://pepy.tech/project/verbose-terminal)
+# Verbose Terminal ![PyPI - Version](https://img.shields.io/pypi/v/Verbose_Terminal) ![PyPI - Downloads](https://img.shields.io/pypi/dm/Verbose_Terminal) ![PyPI - License](https://img.shields.io/pypi/l/Verbose_Terminal)
 
 ## Description
 
@@ -61,6 +61,20 @@ from verbose_terminal import console
 # Enable logging to 'messages.log'
 console.enable_logging('messages.log')
 ```
+
+Note: Logging should be enabled only once during the application initialization. If you enable logging again in another section of your code, the last enabled logging configuration will take precedence, and messages will be logged to the new file specified in the latest `enable_logging` call.
+
+```python
+from verbose_terminal import console
+
+# Enable logging to 'initial_log.log'
+console.enable_logging('initial_log.log')
+
+# Enable logging again to 'new_log.log', this will override the previous log file
+console.enable_logging('new_log.log')
+```
+
+In this example, all subsequent log messages will be saved to 'new_log.log', not 'initial_log.log'. Ensure you enable logging only once to avoid such conflicts.
 
 ### Log flag level
 
